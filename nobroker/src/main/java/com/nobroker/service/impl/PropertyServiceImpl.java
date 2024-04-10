@@ -34,14 +34,15 @@ public class PropertyServiceImpl implements PropertyService {
         Property property = propertyRepository.findById(id).orElseThrow(
                 ()-> new EntityNotFoundException("Property Not Found")
         );
-        property.setStatus(newStatus);
+//        property.setStatus(newStatus);
         Property updatedProperty = propertyRepository.save(property);
         return propertyMapper.entityToDTO(updatedProperty);
     }
 
     @Override
     public String findPropertyById(long id) {
-        Property property = propertyRepository.findById(id).get();
-        return property.getStatus();
+//        Property property = propertyRepository.findById(id).get();
+//        return property.getStatus();
+    	return null;
     }
 }
