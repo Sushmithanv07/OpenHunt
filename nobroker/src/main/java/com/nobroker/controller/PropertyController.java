@@ -25,13 +25,13 @@ public class PropertyController {
             return new ResponseEntity<>(savedProperty, HttpStatus.CREATED);
     }
 
-    @PatchMapping("/{id}")
-    public ResponseEntity<PropertyDto> updatePropertyStatus(
-            @PathVariable Long id,
-            @RequestBody PropertyStatusUpdateRequest request){
-        PropertyDto updatedProperty = propertyService.updatePropertyStatus(id, request.getStatus());
-        return ResponseEntity.ok(updatedProperty);
-    }
+//    @PatchMapping("/{id}")
+//    public ResponseEntity<PropertyDto> updatePropertyStatus(
+//            @PathVariable Long id,
+//            @RequestBody PropertyStatusUpdateRequest request){
+//        PropertyDto updatedProperty = propertyService.updatePropertyStatus(id, request.getStatus());
+//        return ResponseEntity.ok(updatedProperty);
+//    }
     @GetMapping("/{id}")
     public ResponseEntity<String> getProperty(
             @PathVariable("id") long id
