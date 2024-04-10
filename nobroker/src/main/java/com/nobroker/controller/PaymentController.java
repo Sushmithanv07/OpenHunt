@@ -26,14 +26,14 @@ public class PaymentController {
     @Autowired
     private PaymentService paymentService;
 
-    @PostMapping("/initiate")
-    public ResponseEntity<String> initiatePayment(@RequestParam long productId){
-
-        Product product = productRepository.findById(productId).orElseThrow(
-                ()-> new EntityNotFoundException("Product not found"));
-                String paymentIntentId = paymentService.createPaymentIntent(product.getPrice());
-
-        return ResponseEntity.ok(paymentIntentId);
-    }
+//    @PostMapping("/initiate")
+//    public ResponseEntity<String> initiatePayment(@RequestParam long productId){
+//
+//        Product product = productRepository.findById(productId).orElseThrow(
+//                ()-> new EntityNotFoundException("Product not found"));
+//                String paymentIntentId = paymentService.createPaymentIntent(product.getPrice());
+//
+//        return ResponseEntity.ok(paymentIntentId);
+//    }
 }
 
